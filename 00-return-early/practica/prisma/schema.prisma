@@ -14,9 +14,9 @@ datasource db {
 }
 
 model User {
-  id        String   @id
-  name      String
-  username  String
-  email     String
-  createdAt DateTime
+  id           String   @id
+  name         String
+  username     String   @unique
+  emailAddress String   @unique
+  createdAt    DateTime
 }
