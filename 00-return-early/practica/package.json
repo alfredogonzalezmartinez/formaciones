@@ -2,7 +2,9 @@
 	"name": "00-return-early",
 	"version": "1.0.0",
 	"type": "module",
+	"workspaces": ["apps/**"],
 	"scripts": {
+		"dev": "npm run dev -w apps/backoffice-web",
 		"lint": "biome check --apply .",
 		"migrate": "prisma migrate dev",
 		"studio": "prisma studio",
