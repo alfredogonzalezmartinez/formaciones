@@ -22,7 +22,7 @@ const addTwoIntegers = (firstInteger, secondInteger) => {
 };
 ```
 
-Tenemos la función `addTwoIntegers` la cual recibe dos parámetros. 
+Tenemos la función `addTwoIntegers` la cual recibe dos parámetros.
 
 Primero se declara una variable llamada `result`.
 
@@ -74,11 +74,11 @@ const addTwoIntegers = (firstInteger, secondInteger) => {
 
 El uso del patrón return early puede generar los siguientes beneficios:
 
-- **Mejora la legibilidad del código.** 
+- **Mejora la legibilidad del código.**
   - Reduce la indentación y anidamiento del código.
 
-- **Reduce la carga cognitiva.** 
-  - Evita el anidamiento de condiciones que dificultan la compresión del código. 
+- **Reduce la carga cognitiva.**
+  - Evita el anidamiento de condiciones que dificultan la compresión del código.
 
 - **Optimiza la ejecución del código.**
   - Evita el uso de variable temporales.
@@ -87,24 +87,26 @@ El uso del patrón return early puede generar los siguientes beneficios:
 - **Facilita el mantenimiento.**
   - Permite modularizar el código.
 
-## Parones de diseño relacionados
+## Patrones de diseño relacionados
 
 ### Fail Fast
 
 Cuando se produce un error, es mejor detectarlo y notificarlo de inmediato en lugar de dejar que el error se propague y cause problemas en el sistema o comportamientos inesperados.
 
 Recursos:
-- https://www.martinfowler.com/ieeeSoftware/failFast.pdf
-- https://medium.com/@ricardo.zelaya/falla-tan-pronto-como-sea-posible-fail-fast-c26a69d568f0
+
+- <https://www.martinfowler.com/ieeeSoftware/failFast.pdf>
+- <https://medium.com/@ricardo.zelaya/falla-tan-pronto-como-sea-posible-fail-fast-c26a69d568f0>
 
 ### Guard Clause
 
 Una clausula de guardia (o guard clause) es una comprobación que valida que se cumplan las condiciones necesaria para que se ejecute un código, evitando errores durante su ejecución.
 
 Recursos:
-- https://en.wikipedia.org/wiki/Guard_(computer_science)
-- https://secture.com/blog/que-son-las-clausulas-de-guarda-con-ejemplos/
-- https://medium.com/all-you-need-is-clean-code/cl%C3%A1usulas-de-guarda-d731395999bb
+
+- <https://en.wikipedia.org/wiki/Guard_(computer_science)>
+- <https://secture.com/blog/que-son-las-clausulas-de-guarda-con-ejemplos/>
+- <https://medium.com/all-you-need-is-clean-code/cl%C3%A1usulas-de-guarda-d731395999bb>
 
 ### Bouncer Pattern
 
@@ -138,10 +140,11 @@ const ensureParametersArePositive = (firstInteger, secondInteger) => {
 ```
 
 Recursos:
-- https://wiki.c2.com/?BouncerPattern
+
+- <https://wiki.c2.com/?BouncerPattern>
 
 ## Referencias
 
 - [Return Early Pattern. A rule that will make your code more… | by Leonel Menaia Dev | The Startup | Medium](https://medium.com/swlh/return-early-pattern-3d18a41bba8)
 - [Replace Nested Conditional with Guard Clauses | Refactoring Guru](https://refactoring.guru/es/replace-nested-conditional-with-guard-clauses)
-- [The return early pattern | by Marny Lopez | LinkedIn ](https://www.linkedin.com/pulse/return-early-pattern-marny-lopez-eq6je/?trk=article-ssr-frontend-pulse_more-articles_related-content-card)
+- [The return early pattern | by Marny Lopez | LinkedIn](https://www.linkedin.com/pulse/return-early-pattern-marny-lopez-eq6je/?trk=article-ssr-frontend-pulse_more-articles_related-content-card)
