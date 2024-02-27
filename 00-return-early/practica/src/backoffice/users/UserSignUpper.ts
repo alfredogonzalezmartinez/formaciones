@@ -1,7 +1,7 @@
 import { email, is, maxLength, minLength, string, uuid } from "valibot";
 import prisma from "../../../prisma/client";
 
-class UserSignUpper {
+export class UserSignUpper {
 	async signUp({
 		id,
 		name,
@@ -14,21 +14,21 @@ class UserSignUpper {
 		emailAddress: string;
 	}): Promise<void> {
 		if (is(string([uuid()]), id)) {
-			if (is(string([maxLength(255)]), name)) {
+			if (is(string([minLength(1), maxLength(255)]), name)) {
 				if (is(string([minLength(5), maxLength(32)]), username)) {
 					if (is(string([email(), maxLength(255)]), emailAddress)) {
 						try {
-							const userById = prisma.user.findUnique({
+							const userById = await prisma.user.findUnique({
 								where: { id },
 							});
 
 							if (!userById) {
-								const userByUsername = prisma.user.findUnique({
+								const userByUsername = await prisma.user.findUnique({
 									where: { username },
 								});
 
 								if (!userByUsername) {
-									const userByEmail = prisma.user.findUnique({
+									const userByEmail = await prisma.user.findUnique({
 										where: { emailAddress },
 									});
 
@@ -64,6 +64,8 @@ class UserSignUpper {
 					} else {
 						throw new Error("Email invalid");
 					}
+				} else {
+					throw new Error("Username should have a length between 5 and 32");
 				}
 			} else {
 				throw new Error("Name invalid");
