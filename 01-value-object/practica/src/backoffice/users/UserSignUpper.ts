@@ -49,31 +49,25 @@ export class UserSignUpper {
 	async #ensureUserNotExistWithEmailAddress(
 		emailAddress: string,
 	): Promise<void> {
-		const userByEmail = await prisma.user.findUnique({
-			where: { emailAddress },
-		});
+		const user = await prisma.user.findUnique({ where: { emailAddress } });
 
-		if (userByEmail) {
+		if (user) {
 			throw new Error(`User with email ${emailAddress} already exists`);
 		}
 	}
 
 	async #ensureUserNotExistWithUsername(username: string): Promise<void> {
-		const userByUsername = await prisma.user.findUnique({
-			where: { username },
-		});
+		const user = await prisma.user.findUnique({ where: { username } });
 
-		if (userByUsername) {
+		if (user) {
 			throw new Error(`User with username ${username} already exists`);
 		}
 	}
 
 	async #ensureUserNotExistWithId(id: string) {
-		const userById = await prisma.user.findUnique({
-			where: { id },
-		});
+		const user = await prisma.user.findUnique({ where: { id } });
 
-		if (userById) {
+		if (user) {
 			throw new Error(`User with id ${id} already exists`);
 		}
 	}
