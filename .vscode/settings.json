@@ -23,5 +23,9 @@
 	},
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
+	},
+	"markdown.extension.toc.levels": "2..6",
+	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
 	}
-} 
+}
