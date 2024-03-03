@@ -2,6 +2,7 @@
 	"recommendations": [
 		"biomejs.biome",
 		"davidanson.vscode-markdownlint",
+		"nicoespeon.abracadabra",
 		"prisma.prisma",
 		"yzhang.markdown-all-in-one"
 	]
