@@ -26,7 +26,7 @@ export function SignUp() {
 					className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-600 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 					placeholder=" "
 					required
-					max="255"
+					maxLength={255}
 				/>
 				<label
 					htmlFor="name"
@@ -43,8 +43,8 @@ export function SignUp() {
 					className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-600 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 					placeholder=" "
 					required
-					min="5"
-					max="32"
+					minLength={5}
+					maxLength={32}
 				/>
 				<label
 					htmlFor="username"
@@ -61,6 +61,7 @@ export function SignUp() {
 					className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-600 appearance-none  focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 					placeholder=" "
 					required
+					maxLength={255}
 				/>
 				<label
 					htmlFor="emailAddress"
