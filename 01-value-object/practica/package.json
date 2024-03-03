@@ -1,0 +1,24 @@
+{
+	"name": "01-value-object",
+	"version": "1.0.0",
+	"type": "module",
+	"workspaces": ["apps/**"],
+	"scripts": {
+		"dev": "npm run dev -w apps/backoffice-web",
+		"lint": "biome check --apply .",
+		"migrate": "prisma migrate dev",
+		"studio": "prisma studio",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@prisma/client": "5.10.2",
+		"valibot": "0.29.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@types/node": "20.11.24",
+		"prisma": "5.10.2",
+		"ts-node": "10.9.2",
+		"typescript": "5.3.3"
+	}
+}
